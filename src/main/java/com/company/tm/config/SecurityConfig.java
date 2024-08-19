@@ -33,9 +33,6 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/tasks/**").hasAnyRole("USER", "ADMIN")
-                        .requestMatchers("/").permitAll()
-                        .requestMatchers("/login").permitAll()
-                        .requestMatchers("/register").permitAll()
                         .anyRequest().permitAll()
                 )
                 .authenticationProvider(authenticationProvider())
