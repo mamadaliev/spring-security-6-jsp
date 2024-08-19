@@ -16,7 +16,7 @@ docker compose -f compose.yml up
 mvn clean install
 ```
 
-3. Start:
+3. Start application:
 ```
 java -jar .\target\task-manager.jar
 ```
